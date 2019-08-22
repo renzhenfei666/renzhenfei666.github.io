@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>任振飞的博客</title>
+  
+  <subtitle>关注前端</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://renzhenfei.top/"/>
+  <updated>2019-08-22T14:06:19.820Z</updated>
+  <id>http://renzhenfei.top/</id>
+  
+  <author>
+    <name>任振飞</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>追书神器 API 整理</title>
+    <link href="http://renzhenfei.top/2019/08/22/zhui-shu-shen-qi-api-zheng-li/"/>
+    <id>http://renzhenfei.top/2019/08/22/zhui-shu-shen-qi-api-zheng-li/</id>
+    <published>2019-08-22T09:09:14.945Z</published>
+    <updated>2019-08-22T14:06:19.820Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段时间使用追书神器的api做了一个微信小程序，现将追书神器api总结在下方&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="api" scheme="http://renzhenfei.top/categories/api/"/>
+    
+    
+      <category term="api" scheme="http://renzhenfei.top/tags/api/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端常见问题汇总</title>
+    <link href="http://renzhenfei.top/2019/08/22/mian-shi-ti/"/>
+    <id>http://renzhenfei.top/2019/08/22/mian-shi-ti/</id>
+    <published>2019-08-22T03:49:26.203Z</published>
+    <updated>2019-08-22T14:06:08.446Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;css&quot;&gt;&lt;a href=&quot;#css&quot; class=&quot;headerlink&quot; title=&quot;css&quot;&gt;&lt;/a&gt;css&lt;/h1&gt;&lt;h2 id=&quot;1、盒模型&quot;&gt;&lt;a href=&quot;#1、盒模型&quot; class=&quot;headerlink&quot; title=&quot;1、盒模型&quot;&gt;&lt;/a&gt;1、盒模型&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/smyhvae/p/8512617.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.cnblogs.com/smyhvae/p/8512617.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000013069516&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://segmentfault.com/a/1190000013069516&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;2、flex&quot;&gt;&lt;a href=&quot;#2、flex&quot; class=&quot;headerlink&quot; title=&quot;2、flex&quot;&gt;&lt;/a&gt;2、flex&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://juejin.im/entry/58f6e7d3a0bb9f006ab54af9&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://juejin.im/entry/58f6e7d3a0bb9f006ab54af9&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/25303493&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://zhuanlan.zhihu.com/p/25303493&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.zhangxinxu.com/wordpress/2018/10/display-flex-css3-css/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.zhangxinxu.com/wordpress/2018/10/display-flex-css3-css/&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试" scheme="http://renzhenfei.top/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://renzhenfei.top/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>this、apply、call、bind</title>
+    <link href="http://renzhenfei.top/2019/08/21/this-apply-call-bind/"/>
+    <id>http://renzhenfei.top/2019/08/21/this-apply-call-bind/</id>
+    <published>2019-08-21T15:41:21.214Z</published>
+    <updated>2019-08-22T14:06:31.668Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这又是一个面试经典问题&lt;del&gt;/(ㄒoㄒ)/&lt;/del&gt;也是 ES5中众多坑中的一个，在 ES6 中可能会极大避免 this 产生的错误，但是为了一些老代码的维护，最好还是了解一下 this 的指向和 call、apply、bind 三者的区别。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://renzhenfei.top/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://renzhenfei.top/tags/javascript/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,1276 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="前端常见问题汇总, 任振飞的博客">
+    <meta name="description" content="css1、盒模型https://www.cnblogs.com/smyhvae/p/8512617.html
+https://segmentfault.com/a/1190000013069516
+2、flexhttps://juejin.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>前端常见问题汇总 | 任振飞的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">任振飞的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">任振飞的博客</div>
+        <div class="logo-desc">
+            
+            前端技术博客
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/renzhenfei666/renzhenfei666.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/renzhenfei666/renzhenfei666.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        前端常见问题汇总
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/面试/" target="_blank">
+                                <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/面试/" class="post-category" target="_blank">
+                                面试
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-08-22
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        4.4k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        18 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="css"><a href="#css" class="headerlink" title="css"></a>css</h1><h2 id="1、盒模型"><a href="#1、盒模型" class="headerlink" title="1、盒模型"></a>1、盒模型</h2><p><a href="https://www.cnblogs.com/smyhvae/p/8512617.html" target="_blank" rel="noopener">https://www.cnblogs.com/smyhvae/p/8512617.html</a></p>
+<p><a href="https://segmentfault.com/a/1190000013069516" target="_blank" rel="noopener">https://segmentfault.com/a/1190000013069516</a></p>
+<h2 id="2、flex"><a href="#2、flex" class="headerlink" title="2、flex"></a>2、flex</h2><p><a href="https://juejin.im/entry/58f6e7d3a0bb9f006ab54af9" target="_blank" rel="noopener">https://juejin.im/entry/58f6e7d3a0bb9f006ab54af9</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/25303493" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/25303493</a></p>
+<p><a href="https://www.zhangxinxu.com/wordpress/2018/10/display-flex-css3-css/" target="_blank" rel="noopener">https://www.zhangxinxu.com/wordpress/2018/10/display-flex-css3-css/</a></p>
+<a id="more"></a>
+
+<h2 id="3、css单位"><a href="#3、css单位" class="headerlink" title="3、css单位"></a>3、css单位</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units</a></p>
+<h2 id="4、css选择器"><a href="#4、css选择器" class="headerlink" title="4、css选择器"></a>4、css选择器</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started/Selectors" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started/Selectors</a></p>
+<h2 id="5、bfc-清除浮动"><a href="#5、bfc-清除浮动" class="headerlink" title="5、bfc 清除浮动"></a>5、bfc 清除浮动</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context</a></p>
+<h2 id="6、层叠上下文"><a href="#6、层叠上下文" class="headerlink" title="6、层叠上下文"></a>6、层叠上下文</h2><p><a href="https://juejin.im/entry/5b877692f265da432008a5f9" target="_blank" rel="noopener">https://juejin.im/entry/5b877692f265da432008a5f9</a></p>
+<h2 id="7、常见页面布局"><a href="#7、常见页面布局" class="headerlink" title="7、常见页面布局"></a>7、常见页面布局</h2><p><a href="https://juejin.im/entry/5aa7246ff265da239f070791" target="_blank" rel="noopener">https://juejin.im/entry/5aa7246ff265da239f070791</a></p>
+<h2 id="8、响应式布局"><a href="#8、响应式布局" class="headerlink" title="8、响应式布局"></a>8、响应式布局</h2><p><a href="https://juejin.im/entry/5caaa4a6e51d452b230d6129" target="_blank" rel="noopener">https://juejin.im/entry/5caaa4a6e51d452b230d6129</a></p>
+<h2 id="9、css预处理，后处理"><a href="#9、css预处理，后处理" class="headerlink" title="9、css预处理，后处理"></a>9、css预处理，后处理</h2><p><a href="https://blog.csdn.net/yushuangyushuang/article/details/79209752" target="_blank" rel="noopener">https://blog.csdn.net/yushuangyushuang/article/details/79209752</a></p>
+<h2 id="10、css3新特性"><a href="#10、css3新特性" class="headerlink" title="10、css3新特性"></a>10、css3新特性</h2><p><a href="https://blog.csdn.net/pcaxb/article/details/87251949" target="_blank" rel="noopener">https://blog.csdn.net/pcaxb/article/details/87251949</a></p>
+<p><a href="https://juejin.im/entry/595f1e3c5188250d914dd53c" target="_blank" rel="noopener">https://juejin.im/entry/595f1e3c5188250d914dd53c</a></p>
+<p>animation和transiton的相关属性</p>
+<p>animate和translate</p>
+<p><a href="https://juejin.im/entry/5b137f2f5188257d3a69659d" target="_blank" rel="noopener">https://juejin.im/entry/5b137f2f5188257d3a69659d</a></p>
+<h2 id="11、display哪些取值"><a href="#11、display哪些取值" class="headerlink" title="11、display哪些取值"></a>11、display哪些取值</h2><p>position<br>    1、position属性取值：static(默认)、relative、absolute、fixed、inherit。<br>    2、postision：static；始终处于文档流给予的位置。看起来好像没有用，但它可以快速取消定位，让top，right，bottom，left的值失效。在切换的时候可以尝试这个方法。<br>    3、除了static值，在其他三个值的设置下，z-index才会起作用。（确切地说z-index只在定位元素上有效）<br>    4、position：relative和absolute都可以用于定位，区别在于前者的div还属于正常的文档流，后者已经是脱离了正常文档流，不占据空间位置，不会将父类撑开。定位原点relative是相对于它在正常流中的默认位置偏移，它原本占据的空间任然保留；absolute相对于第一个position属性值不为static的父类。所以设置了position：absolute，其父类的该属性值要注意，而且overflow：hidden也不能乱设置，因为不属于正常文档流，不会占据父类的高度，也就不会有滚动条。<br>    5、position：fixed 旧版本IE不支持，定位原点相对于浏览器窗口，而且不能变。常用于header，footer，或者一些固定的悬浮div，随滚动条滚动又稳定又流畅，比JS好多了。fixed可以有很多创造性的布局和作用，兼容性是问题。<br>    6、position：inherit。规定从父类继承position属性的值。但是任何版本的IE都不支持该属性值。</p>
+<pre><code>display
+1、display属性取值：none、inline、inline-block、block、flex、inherit。
+2、display属性规定元素应该生成的框的类型。文档内任何元素都是框，块框或行内框。
+3、display：none和visiability：hidden都可以隐藏div，区别有点像absolute和relative，前者不占据文档的空间，后者还是占据文档的位置。
+4、display：inline和block，又叫行内元素和块级元素。表现出来的区别就是block独占一行，在浏览器中通常垂直布局，可以用margin来控制块级元素之间的间距；而inline以水平方式布局，垂直方向的margin和padding都是无效的，大小跟内容一样，且无法设置宽高。inline就像塑料袋，内容怎么样，就长得怎么样；block就像盒子，有固定的宽和高。
+5、inline-block就介于两者之间。
+6、display: flex 意为"弹性盒布局模型"，用来为盒状模型提供最大的灵活性。任何一个容器都可以指定为flex布局。设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。采用flex布局的元素，称为flex容器。它的所有子元素自动成为容器成员，称为flex项目（flex item）。
+容器的属性：以下6个属性设置在容器上。
+    flex-direction    决定主轴的方向（项目的排列方向）。
+        row（默认值）：主轴为水平方向，起点在左端。
+        row-reverse：主轴为水平方向，起点在右端。
+        column：主轴为垂直方向，起点在上沿。
+        column-reverse：主轴为垂直方向，起点在下沿。
+    flex-wrap   默认情况下，项目都排在一条线上。flex-wrap属性定义，如果一条轴线排不下，如何换行。
+        nowrap（默认）：不换行。
+        wrap：换行，第一行在上方。
+        wrap-reverse：换行，第一行在下方。
+    flex-flow   flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+    justify-content     定义了项目在主轴上的对齐方式。假设主轴为从左到右。
+        flex-start（默认值）：左对齐
+        flex-end：右对齐
+        center： 居中
+        space-between：两端对齐，项目之间的间隔都相等。
+        space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+    align-items     定义项目在交叉轴上如何对齐。假设交叉轴从上到下。
+        flex-start：交叉轴的起点对齐。
+        flex-end：交叉轴的终点对齐。
+        center：交叉轴的中点对齐。
+        baseline: 项目的第一行文字的基线对齐。
+        stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+    align-content   义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+        flex-start：与交叉轴的起点对齐。
+        flex-end：与交叉轴的终点对齐。
+        center：与交叉轴的中点对齐。
+        space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+        space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
+        stretch（默认值）：轴线占满整个交叉轴。
+项目的属性：以下6个属性设置在项目上。
+    order           定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+    flex-grow       定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
+    flex-shrink     定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+    flex-basis      定义了在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。
+    flex        flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。建议优先使用这个属性，而不是单独写三个分离的属性
+    align-self      align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。该属性可能取6个值，除了auto，其他都与align-items属性完全一致。</code></pre><h2 id="12、相邻的两个inline-block节点为什么会出现间隔，该如何解决"><a href="#12、相邻的两个inline-block节点为什么会出现间隔，该如何解决" class="headerlink" title="12、相邻的两个inline-block节点为什么会出现间隔，该如何解决"></a>12、相邻的两个inline-block节点为什么会出现间隔，该如何解决</h2><p><a href="https://www.jianshu.com/p/b6fb427308ad" target="_blank" rel="noopener">https://www.jianshu.com/p/b6fb427308ad</a></p>
+<h2 id="13、meta-viewport-移动端适配"><a href="#13、meta-viewport-移动端适配" class="headerlink" title="13、meta viewport 移动端适配"></a>13、meta viewport 移动端适配</h2><p><a href="https://juejin.im/post/5bfa99e0e51d4555557d26c6" target="_blank" rel="noopener">https://juejin.im/post/5bfa99e0e51d4555557d26c6</a></p>
+<h2 id="14、CSS实现宽度自适应100-，宽高16-9的比例的矩形"><a href="#14、CSS实现宽度自适应100-，宽高16-9的比例的矩形" class="headerlink" title="14、CSS实现宽度自适应100%，宽高16:9的比例的矩形"></a>14、CSS实现宽度自适应100%，宽高16:9的比例的矩形</h2><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scale<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* scale 用来实现宽高等比例 1:1 padding-bottom:100%; 4:3 padding-bottom:75%; 16:9 padding-bottom:56.25%; */</span>
+<span class="token selector"><span class="token class">.scale</span> </span><span class="token punctuation">{</span><span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span><span class="token property">padding-bottom</span><span class="token punctuation">:</span> <span class="token number">56.25%</span><span class="token punctuation">;</span><span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* item 用来放置全部的子元素 */</span>
+<span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span><span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#000</span><span class="token punctuation">;</span><span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span><span class="token property">color</span><span class="token punctuation">:</span><span class="token hexcode">#fff</span><span class="token punctuation">}</span></code></pre>
+<h2 id="15、rem布局的优缺点"><a href="#15、rem布局的优缺点" class="headerlink" title="15、rem布局的优缺点"></a>15、rem布局的优缺点</h2><p><a href="https://blog.csdn.net/qq_36263601/article/details/78366710" target="_blank" rel="noopener">https://blog.csdn.net/qq_36263601/article/details/78366710</a></p>
+<p><a href="https://www.zhihu.com/question/37179916" target="_blank" rel="noopener">https://www.zhihu.com/question/37179916</a></p>
+<h2 id="16、画三角形"><a href="#16、画三角形" class="headerlink" title="16、画三角形"></a>16、画三角形</h2><p>正三角形</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#triangle-up</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">border-left</span><span class="token punctuation">:</span> <span class="token number">50</span>px solid transparent<span class="token punctuation">;</span>
+    <span class="token property">border-right</span><span class="token punctuation">:</span> <span class="token number">50</span>px solid transparent<span class="token punctuation">;</span>
+    <span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>倒正三角形</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#triangle-down</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">border-left</span><span class="token punctuation">:</span> <span class="token number">50</span>px solid transparent<span class="token punctuation">;</span>
+    <span class="token property">border-right</span><span class="token punctuation">:</span> <span class="token number">50</span>px solid transparent<span class="token punctuation">;</span>
+    <span class="token property">border-top</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>正左三角形</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#triangle-left</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">border-top</span><span class="token punctuation">:</span> <span class="token number">50</span>px solid transparent<span class="token punctuation">;</span>
+    <span class="token property">border-right</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid red<span class="token punctuation">;</span>
+    <span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">50</span>px solid transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>正右三角形</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#triangle-right</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">border-top</span><span class="token punctuation">:</span> <span class="token number">50</span>px solid transparent<span class="token punctuation">;</span>
+    <span class="token property">border-left</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid red<span class="token punctuation">;</span>
+    <span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">50</span>px solid transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>直角左上三角形</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#triangle-topleft</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">border-top</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid red<span class="token punctuation">;</span>
+    <span class="token property">border-right</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>直角右上三角形</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#triangle-topright</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">border-top</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid red<span class="token punctuation">;</span>
+    <span class="token property">border-left</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid transparent<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span></code></pre>
+<p>直角左下三角形</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#triangle-bottomleft</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid red<span class="token punctuation">;</span>
+    <span class="token property">border-right</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>直角右下三角形</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#triangle-bottomright</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid red<span class="token punctuation">;</span>
+    <span class="token property">border-left</span><span class="token punctuation">:</span> <span class="token number">100</span>px solid transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="17、1像素边框问题"><a href="#17、1像素边框问题" class="headerlink" title="17、1像素边框问题"></a>17、1像素边框问题</h2><p><a href="https://blog.csdn.net/xuexizhe88/article/details/80566552" target="_blank" rel="noopener">https://blog.csdn.net/xuexizhe88/article/details/80566552</a></p>
+<h1 id="html"><a href="#html" class="headerlink" title="html"></a>html</h1><h2 id="1、语义化"><a href="#1、语义化" class="headerlink" title="1、语义化"></a>1、语义化</h2><p><a href="https://www.jianshu.com/p/6bc1fc059b51" target="_blank" rel="noopener">https://www.jianshu.com/p/6bc1fc059b51</a></p>
+<h2 id="2、新标签新特性"><a href="#2、新标签新特性" class="headerlink" title="2、新标签新特性"></a>2、新标签新特性</h2><p><a href="https://juejin.im/post/5b9f76235188255c652d3212" target="_blank" rel="noopener">https://juejin.im/post/5b9f76235188255c652d3212</a></p>
+<h2 id="3、input和textarea的区别"><a href="#3、input和textarea的区别" class="headerlink" title="3、input和textarea的区别"></a>3、input和textarea的区别</h2><p><a href="https://www.jianshu.com/p/a72bb81703b7" target="_blank" rel="noopener">https://www.jianshu.com/p/a72bb81703b7</a></p>
+<h2 id="4、用一个div模拟textarea的实现"><a href="#4、用一个div模拟textarea的实现" class="headerlink" title="4、用一个div模拟textarea的实现"></a>4、用一个div模拟textarea的实现</h2><p>内容可编辑 contenteditable</p>
+<p>​    对就是contenteditable，给div添加contenteditable=true即可</p>
+<h2 id="5、移动设备忽略将页面中的数字识别为电话号码的方法"><a href="#5、移动设备忽略将页面中的数字识别为电话号码的方法" class="headerlink" title="5、移动设备忽略将页面中的数字识别为电话号码的方法"></a>5、移动设备忽略将页面中的数字识别为电话号码的方法</h2><p><a href="https://blog.csdn.net/shuidinaozhongyan/article/details/73194556" target="_blank" rel="noopener">https://blog.csdn.net/shuidinaozhongyan/article/details/73194556</a></p>
+<h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><h2 id="1、原型-原型链-构造函数-实例-继承"><a href="#1、原型-原型链-构造函数-实例-继承" class="headerlink" title="1、原型/原型链/构造函数/实例/继承"></a>1、原型/原型链/构造函数/实例/继承</h2><p><a href="https://juejin.im/post/5c6fc5b3e51d457750607cdb" target="_blank" rel="noopener">https://juejin.im/post/5c6fc5b3e51d457750607cdb</a></p>
+<p><a href="https://blog.csdn.net/SpicyBoiledFish/article/details/71123162" target="_blank" rel="noopener">https://blog.csdn.net/SpicyBoiledFish/article/details/71123162</a></p>
+<p><a href="https://segmentfault.com/a/1190000018524727" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018524727</a></p>
+<p><a href="https://github.com/mqyqingfeng/Blog/issues/2" target="_blank" rel="noopener">https://github.com/mqyqingfeng/Blog/issues/2</a></p>
+<h2 id="2、有几种方式可以实现继承"><a href="#2、有几种方式可以实现继承" class="headerlink" title="2、有几种方式可以实现继承"></a>2、有几种方式可以实现继承</h2><p><a href="https://segmentfault.com/a/1190000016708006" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016708006</a></p>
+<h2 id="3、用原型实现继承有什么缺点，怎么解决"><a href="#3、用原型实现继承有什么缺点，怎么解决" class="headerlink" title="3、用原型实现继承有什么缺点，怎么解决"></a>3、用原型实现继承有什么缺点，怎么解决</h2><p><a href="https://segmentfault.com/a/1190000011151188" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011151188</a></p>
+<p><a href="https://juejin.im/post/5ccff45a51882541b07a9e3d" target="_blank" rel="noopener">https://juejin.im/post/5ccff45a51882541b07a9e3d</a></p>
+<p><a href="https://github.com/mqyqingfeng/Blog/issues/16" target="_blank" rel="noopener">https://github.com/mqyqingfeng/Blog/issues/16</a></p>
+<h2 id="4、arguments"><a href="#4、arguments" class="headerlink" title="4、arguments"></a>4、arguments</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments</a></p>
+<p><a href="https://juejin.im/entry/5903018cac502e0063d92127" target="_blank" rel="noopener">https://juejin.im/entry/5903018cac502e0063d92127</a></p>
+<p><a href="https://blog.csdn.net/qq_16339527/article/details/53231725" target="_blank" rel="noopener">https://blog.csdn.net/qq_16339527/article/details/53231725</a></p>
+<h2 id="5、数据类型判断"><a href="#5、数据类型判断" class="headerlink" title="5、数据类型判断"></a>5、数据类型判断</h2><p><a href="https://segmentfault.com/a/1190000015264821" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015264821</a></p>
+<p><a href="https://juejin.im/entry/5964a1c15188250d8b65ef5f" target="_blank" rel="noopener">https://juejin.im/entry/5964a1c15188250d8b65ef5f</a></p>
+<h2 id="6、作用域链、闭包、作用域"><a href="#6、作用域链、闭包、作用域" class="headerlink" title="6、作用域链、闭包、作用域"></a>6、作用域链、闭包、作用域</h2><p><a href="https://juejin.im/post/5bf3baaae51d4548d14fb5d1" target="_blank" rel="noopener">https://juejin.im/post/5bf3baaae51d4548d14fb5d1</a></p>
+<p><a href="https://github.com/dwqs/blog/issues/18" target="_blank" rel="noopener">https://github.com/dwqs/blog/issues/18</a></p>
+<h2 id="7、Ajax的原生写法"><a href="#7、Ajax的原生写法" class="headerlink" title="7、Ajax的原生写法"></a>7、Ajax的原生写法</h2><p><a href="https://www.jianshu.com/p/2be2e4f1fc8e" target="_blank" rel="noopener">https://www.jianshu.com/p/2be2e4f1fc8e</a></p>
+<p><a href="https://github.com/nodejh/nodejh.github.io/issues/15" target="_blank" rel="noopener">https://github.com/nodejh/nodejh.github.io/issues/15</a></p>
+<h2 id="8、对象深拷贝、浅拷贝"><a href="#8、对象深拷贝、浅拷贝" class="headerlink" title="8、对象深拷贝、浅拷贝"></a>8、对象深拷贝、浅拷贝</h2><p><a href="https://juejin.im/post/5c26dd8fe51d4570c053e08b" target="_blank" rel="noopener">https://juejin.im/post/5c26dd8fe51d4570c053e08b</a></p>
+<h2 id="9、图片懒加载、预加载"><a href="#9、图片懒加载、预加载" class="headerlink" title="9、图片懒加载、预加载"></a>9、图片懒加载、预加载</h2><p><a href="https://juejin.im/post/5b0c3b53f265da09253cbed0" target="_blank" rel="noopener">https://juejin.im/post/5b0c3b53f265da09253cbed0</a></p>
+<h2 id="10、实现页面加载进度条"><a href="#10、实现页面加载进度条" class="headerlink" title="10、实现页面加载进度条"></a>10、实现页面加载进度条</h2><p><a href="https://juejin.im/post/5b31e07ef265da599c56165a" target="_blank" rel="noopener">https://juejin.im/post/5b31e07ef265da599c56165a</a></p>
+<h2 id="11、this关键字"><a href="#11、this关键字" class="headerlink" title="11、this关键字"></a>11、this关键字</h2><p><a href="https://juejin.im/post/59bfe84351882531b730bac2" target="_blank" rel="noopener">https://juejin.im/post/59bfe84351882531b730bac2</a></p>
+<h2 id="12、函数式编程"><a href="#12、函数式编程" class="headerlink" title="12、函数式编程"></a>12、函数式编程</h2><p><a href="https://juejin.im/post/5b4ac0d0f265da0fa959a785" target="_blank" rel="noopener">https://juejin.im/post/5b4ac0d0f265da0fa959a785</a></p>
+<p><a href="https://juejin.im/post/5c19c3ffe51d45059b632eef" target="_blank" rel="noopener">https://juejin.im/post/5c19c3ffe51d45059b632eef</a></p>
+<h2 id="13、手动实现parseInt"><a href="#13、手动实现parseInt" class="headerlink" title="13、手动实现parseInt"></a>13、手动实现parseInt</h2><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">l</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment" spellcheck="true">/**********/</span>
+<span class="token keyword">function</span> <span class="token function">_parseInt</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span>radix<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> str <span class="token operator">!=</span><span class="token string">"string"</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> str <span class="token operator">!=</span><span class="token string">"number"</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">NaN</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    str <span class="token operator">=</span><span class="token function">String</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// l(str)</span>
+    <span class="token keyword">let</span> len <span class="token operator">=</span> str<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>len<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">NaN</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>radix<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> radix <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> radix <span class="token operator">!==</span><span class="token string">"number"</span> <span class="token operator">||</span> radix <span class="token operator">&lt;</span> <span class="token number">2</span> <span class="token operator">||</span> radix <span class="token operator">></span><span class="token number">36</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">NaN</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> arr <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">l</span><span class="token punctuation">(</span>arr <span class="token keyword">instanceof</span> <span class="token class-name">Array</span><span class="token punctuation">)</span>
+        <span class="token function">l</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> arr<span class="token punctuation">)</span>
+        res <span class="token operator">+</span><span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">*</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span>radix<span class="token punctuation">,</span>i<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">l</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">_parseInt</span><span class="token punctuation">(</span><span class="token string">"654646"</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span></code></pre>
+<h2 id="14、为什么会有同源策略"><a href="#14、为什么会有同源策略" class="headerlink" title="14、为什么会有同源策略"></a>14、为什么会有同源策略</h2><p><a href="http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html</a></p>
+<p><a href="https://segmentfault.com/a/1190000015597029" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015597029</a></p>
+<h2 id="15、怎么判断两个对象是否相等"><a href="#15、怎么判断两个对象是否相等" class="headerlink" title="15、怎么判断两个对象是否相等"></a>15、怎么判断两个对象是否相等</h2><p><a href="https://juejin.im/post/5c948c41e51d451606692b30" target="_blank" rel="noopener">https://juejin.im/post/5c948c41e51d451606692b30</a></p>
+<h2 id="16、事件模型"><a href="#16、事件模型" class="headerlink" title="16、事件模型"></a>16、事件模型</h2><p>事件委托、代理</p>
+<p><a href="https://blog.lbinin.com/frontEnd/JavaScript/JS-Event-Binding.html" target="_blank" rel="noopener">https://blog.lbinin.com/frontEnd/JavaScript/JS-Event-Binding.html</a></p>
+<p><a href="https://javascript.ruanyifeng.com/dom/event.html" target="_blank" rel="noopener">https://javascript.ruanyifeng.com/dom/event.html</a></p>
+<p><a href="https://www.jianshu.com/p/d867121ec167" target="_blank" rel="noopener">https://www.jianshu.com/p/d867121ec167</a></p>
+<p>如何让事件先冒泡后捕获</p>
+<h2 id="17、window的onload事件和domcontentloaded"><a href="#17、window的onload事件和domcontentloaded" class="headerlink" title="17、window的onload事件和domcontentloaded"></a>17、window的onload事件和domcontentloaded</h2><p><a href="https://www.cnblogs.com/hh54188/archive/2013/03/01/2939426.html" target="_blank" rel="noopener">https://www.cnblogs.com/hh54188/archive/2013/03/01/2939426.html</a></p>
+<h2 id="18、for…in迭代和for…of有什么区别"><a href="#18、for…in迭代和for…of有什么区别" class="headerlink" title="18、for…in迭代和for…of有什么区别"></a>18、for…in迭代和for…of有什么区别</h2><p><a href="https://juejin.im/post/5aea83c86fb9a07aae15013b" target="_blank" rel="noopener">https://juejin.im/post/5aea83c86fb9a07aae15013b</a></p>
+<h2 id="19、函数柯里化"><a href="#19、函数柯里化" class="headerlink" title="19、函数柯里化"></a>19、函数柯里化</h2><p><a href="https://juejin.im/post/5d2299faf265da1bb67a3b65" target="_blank" rel="noopener">https://juejin.im/post/5d2299faf265da1bb67a3b65</a></p>
+<h2 id="20、call-apply区别，原生实现bind"><a href="#20、call-apply区别，原生实现bind" class="headerlink" title="20、call apply区别，原生实现bind"></a>20、call apply区别，原生实现bind</h2><p>call，apply，bind 三者用法和区别：角度可为参数、绑定规则（显示绑定和强绑定），运行效率、运行情况。</p>
+<p><a href="https://juejin.im/post/59bfe84351882531b730bac2" target="_blank" rel="noopener">https://juejin.im/post/59bfe84351882531b730bac2</a></p>
+<p><a href="https://juejin.im/post/57dc97f35bbb50005e5b39bd" target="_blank" rel="noopener">https://juejin.im/post/57dc97f35bbb50005e5b39bd</a></p>
+<h2 id="21、async-await"><a href="#21、async-await" class="headerlink" title="21、async/await"></a>21、async/await</h2><p><a href="https://juejin.im/post/5a9516885188257a6b061d72" target="_blank" rel="noopener">https://juejin.im/post/5a9516885188257a6b061d72</a></p>
+<h2 id="22、立即执行函数和使用场景"><a href="#22、立即执行函数和使用场景" class="headerlink" title="22、立即执行函数和使用场景"></a>22、立即执行函数和使用场景</h2><p><a href="https://juejin.im/post/5d11e667e51d4510aa01152b" target="_blank" rel="noopener">https://juejin.im/post/5d11e667e51d4510aa01152b</a></p>
+<p><a href="https://juejin.im/post/59fc0a8c6fb9a04500026707" target="_blank" rel="noopener">https://juejin.im/post/59fc0a8c6fb9a04500026707</a></p>
+<h2 id="23、设计模式-要求说出如何实现-应用-优缺点-单例模式实现"><a href="#23、设计模式-要求说出如何实现-应用-优缺点-单例模式实现" class="headerlink" title="23、设计模式(要求说出如何实现,应用,优缺点)/单例模式实现"></a>23、设计模式(要求说出如何实现,应用,优缺点)/单例模式实现</h2><p><a href="https://juejin.im/post/59df4f74f265da430f311909" target="_blank" rel="noopener">https://juejin.im/post/59df4f74f265da430f311909</a></p>
+<p><a href="https://juejin.im/post/5afe6430518825428630bc4d" target="_blank" rel="noopener">https://juejin.im/post/5afe6430518825428630bc4d</a></p>
+<h2 id="24、iframe的缺点有哪些"><a href="#24、iframe的缺点有哪些" class="headerlink" title="24、iframe的缺点有哪些"></a>24、iframe的缺点有哪些</h2><p><a href="https://blog.csdn.net/yintianqin/article/details/72625785" target="_blank" rel="noopener">https://blog.csdn.net/yintianqin/article/details/72625785</a></p>
+<p><strong>iframe的优点：</strong><br>1.iframe能够原封不动的把嵌入的网页展现出来。<br>2.如果有多个网页引用iframe，那么你只需要修改iframe的内容，就可以实现调用的每一个页面内容的更改，方便快捷。<br>3.网页如果为了统一风格，头部和版本都是一样的，就可以写成一个页面，用iframe来嵌套，可以增加代码的可重用。<br>4.如果遇到加载缓慢的第三方内容如图标和广告，这些问题可以由iframe来解决。<br><strong>iframe的缺点：</strong><br>1.会产生很多页面，<code>不容易管理</code>。<br>2.iframe框架结构有时会让人感到迷惑，如果框架个数多的话，可能会出现上下、左右滚动条，会分散访问者的注意力，<code>用户体验度差</code>。<br>3.代码复杂，无法被一些搜索引擎索引到，这一点很关键，现在的搜索引擎爬虫还不能很好的处理iframe中的内容，所以使用iframe会<code>不利于搜索引擎优化</code>。<br>4.很多的移动设备（PDA手机）无法完全显示框架，<code>设备兼容性</code>差。<br>5.iframe框架页面会<code>增加服务器的http请求</code>，对于大型网站是不可取的。<br>分析了这么多，<code>现在基本上都是用Ajax来代替iframe，所以iframe已经渐渐的退出了前端开发</code>。</p>
+<h2 id="25、数组问题"><a href="#25、数组问题" class="headerlink" title="25、数组问题"></a>25、数组问题</h2><p>数组去重</p>
+<p><a href="https://juejin.im/post/5b0284ac51882542ad774c45" target="_blank" rel="noopener">https://juejin.im/post/5b0284ac51882542ad774c45</a></p>
+<p><a href="https://juejin.im/post/5949d85f61ff4b006c0de98b" target="_blank" rel="noopener">https://juejin.im/post/5949d85f61ff4b006c0de98b</a></p>
+<p>数组常用方法</p>
+<p><a href="https://juejin.im/post/5b0903b26fb9a07a9d70c7e0" target="_blank" rel="noopener">https://juejin.im/post/5b0903b26fb9a07a9d70c7e0</a></p>
+<p><a href="https://juejin.im/entry/59ad2cacf265da248a7aa6cc" target="_blank" rel="noopener">https://juejin.im/entry/59ad2cacf265da248a7aa6cc</a></p>
+<p>查找数组重复项</p>
+<p><a href="https://blog.csdn.net/jayhkw/article/details/61916379" target="_blank" rel="noopener">https://blog.csdn.net/jayhkw/article/details/61916379</a></p>
+<p>扁平化数组</p>
+<p><a href="https://github.com/mqyqingfeng/Blog/issues/36" target="_blank" rel="noopener">https://github.com/mqyqingfeng/Blog/issues/36</a></p>
+<p>按数组中各项和特定值差值排序</p>
+<p><a href="http://louiszhai.github.io/2016/12/23/sort/" target="_blank" rel="noopener">http://louiszhai.github.io/2016/12/23/sort/</a></p>
+<h2 id="26、BOM属性对象方法"><a href="#26、BOM属性对象方法" class="headerlink" title="26、BOM属性对象方法"></a>26、BOM属性对象方法</h2><p><a href="https://www.cnblogs.com/leftJS/p/11070006.html" target="_blank" rel="noopener">https://www.cnblogs.com/leftJS/p/11070006.html</a></p>
+<p><a href="https://blog.csdn.net/williamgavin/article/details/79143822" target="_blank" rel="noopener">https://blog.csdn.net/williamgavin/article/details/79143822</a></p>
+<h2 id="27、服务端渲染"><a href="#27、服务端渲染" class="headerlink" title="27、服务端渲染"></a>27、服务端渲染</h2><p><a href="https://juejin.im/post/5c068fd8f265da61524d2abc" target="_blank" rel="noopener">https://juejin.im/post/5c068fd8f265da61524d2abc</a></p>
+<h2 id="28、垃圾回收机制"><a href="#28、垃圾回收机制" class="headerlink" title="28、垃圾回收机制"></a>28、垃圾回收机制</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Memory_Management" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Memory_Management</a></p>
+<h2 id="29、eventloop"><a href="#29、eventloop" class="headerlink" title="29、eventloop"></a>29、eventloop</h2><p>进程和线程</p>
+<p>任务队列</p>
+<p><a href="https://juejin.im/post/5c9a43175188252d876e5903" target="_blank" rel="noopener">https://juejin.im/post/5c9a43175188252d876e5903</a></p>
+<p><a href="https://juejin.im/post/5bfd5ebd6fb9a049dc01f070" target="_blank" rel="noopener">https://juejin.im/post/5bfd5ebd6fb9a049dc01f070</a></p>
+<h2 id="30、如何快速让字符串变成已千为精度的数字"><a href="#30、如何快速让字符串变成已千为精度的数字" class="headerlink" title="30、如何快速让字符串变成已千为精度的数字"></a>30、如何快速让字符串变成已千为精度的数字</h2><h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h2 id="1、声明-let、const"><a href="#1、声明-let、const" class="headerlink" title="1、声明 let、const"></a>1、声明 let、const</h2><h2 id="2、解构赋值"><a href="#2、解构赋值" class="headerlink" title="2、解构赋值"></a>2、解构赋值</h2><h2 id="3、声明类与继承：class、extend"><a href="#3、声明类与继承：class、extend" class="headerlink" title="3、声明类与继承：class、extend"></a>3、声明类与继承：class、extend</h2><h2 id="4、Promise的使用与实现"><a href="#4、Promise的使用与实现" class="headerlink" title="4、Promise的使用与实现"></a>4、Promise的使用与实现</h2><h2 id="5、generator（异步编程、yield、next-、await-、async）"><a href="#5、generator（异步编程、yield、next-、await-、async）" class="headerlink" title="5、generator（异步编程、yield、next()、await 、async）"></a>5、generator（异步编程、yield、next()、await 、async）</h2><h2 id="6、箭头函数this指向问题、拓展运算符"><a href="#6、箭头函数this指向问题、拓展运算符" class="headerlink" title="6、箭头函数this指向问题、拓展运算符"></a>6、箭头函数this指向问题、拓展运算符</h2><h2 id="7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？"><a href="#7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？" class="headerlink" title="7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？"></a>7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？</h2><h2 id="8、ES6怎么编译成ES5-css-loader原理-过程"><a href="#8、ES6怎么编译成ES5-css-loader原理-过程" class="headerlink" title="8、ES6怎么编译成ES5,css-loader原理,过程"></a>8、ES6怎么编译成ES5,css-loader原理,过程</h2><h2 id="9、ES6转成ES5的常见例子"><a href="#9、ES6转成ES5的常见例子" class="headerlink" title="9、ES6转成ES5的常见例子"></a>9、ES6转成ES5的常见例子</h2><p>使用es5实现es6的class</p>
+<h1 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><h2 id="1、输入url到展示页面过程发生了什么？"><a href="#1、输入url到展示页面过程发生了什么？" class="headerlink" title="1、输入url到展示页面过程发生了什么？"></a>1、输入url到展示页面过程发生了什么？</h2><p><a href="https://segmentfault.com/a/1190000013522717" target="_blank" rel="noopener">https://segmentfault.com/a/1190000013522717</a></p>
+<h2 id="2、重绘与回流"><a href="#2、重绘与回流" class="headerlink" title="2、重绘与回流"></a>2、重绘与回流</h2><p>重绘(repaint): 当元素样式的改变不影响布局时，浏览器将使用重绘对元素进行更新，此时由于只需要UI层面的重新像素绘制，因此 损耗较少</p>
+<p>回流(reflow): 当元素的尺寸、结构或触发某些属性时，浏览器会重新渲染页面，称为回流。此时，浏览器需要重新经过计算，计算后还需要重新页面布局，因此是较重的操作。会触发回流的操作:</p>
+<p>页面初次渲染</p>
+<p>浏览器窗口大小改变</p>
+<p>元素尺寸、位置、内容发生改变</p>
+<p>元素字体大小变化</p>
+<p>添加或者删除可见的 dom 元素</p>
+<p>激活 CSS 伪类（例如：:hover）</p>
+<p>查询某些属性或调用某些方法</p>
+<p>clientWidth、clientHeight、clientTop、clientLeft</p>
+<p>offsetWidth、offsetHeight、offsetTop、offsetLeft</p>
+<p>scrollWidth、scrollHeight、scrollTop、scrollLeft</p>
+<p>getComputedStyle()</p>
+<p>getBoundingClientRect()</p>
+<p>scrollTo()<br>回流必定触发重绘，重绘不一定触发回流。重绘的开销较小，回流的代价较高。</p>
+<h2 id="3、防抖与节流"><a href="#3、防抖与节流" class="headerlink" title="3、防抖与节流"></a>3、防抖与节流</h2><p><a href="https://juejin.im/post/5c87b54ce51d455f7943dddb" target="_blank" rel="noopener">https://juejin.im/post/5c87b54ce51d455f7943dddb</a></p>
+<h2 id="4、cookies、session、sessionStorage、localStorage"><a href="#4、cookies、session、sessionStorage、localStorage" class="headerlink" title="4、cookies、session、sessionStorage、localStorage"></a>4、cookies、session、sessionStorage、localStorage</h2><p><a href="https://juejin.im/post/5caac97c5188251169093efe" target="_blank" rel="noopener">https://juejin.im/post/5caac97c5188251169093efe</a></p>
+<h2 id="5、浏览器内核"><a href="#5、浏览器内核" class="headerlink" title="5、浏览器内核"></a>5、浏览器内核</h2><p><a href="https://juejin.im/entry/57ff3cea0e3dd90057e5f25e" target="_blank" rel="noopener">https://juejin.im/entry/57ff3cea0e3dd90057e5f25e</a></p>
+<h1 id="服务端与网络"><a href="#服务端与网络" class="headerlink" title="服务端与网络"></a>服务端与网络</h1><h2 id="1、常见状态码"><a href="#1、常见状态码" class="headerlink" title="1、常见状态码"></a>1、常见状态码</h2><p><a href="https://blog.csdn.net/q1056843325/article/details/53147180" target="_blank" rel="noopener">https://blog.csdn.net/q1056843325/article/details/53147180</a></p>
+<h2 id="2、缓存"><a href="#2、缓存" class="headerlink" title="2、缓存"></a>2、缓存</h2><p>200 From cache和200 ok</p>
+<p>400,401,403状态码分别代表什么</p>
+<p>浏览器缓存</p>
+<h2 id="3、cookie-session-token"><a href="#3、cookie-session-token" class="headerlink" title="3、cookie, session, token"></a>3、cookie, session, token</h2><h2 id="4、前端持久化的方式、区别"><a href="#4、前端持久化的方式、区别" class="headerlink" title="4、前端持久化的方式、区别"></a>4、前端持久化的方式、区别</h2><p><a href="https://juejin.im/post/5a7e92696fb9a06336114aca" target="_blank" rel="noopener">https://juejin.im/post/5a7e92696fb9a06336114aca</a></p>
+<h2 id="5、DNS是怎么解析的"><a href="#5、DNS是怎么解析的" class="headerlink" title="5、DNS是怎么解析的"></a>5、DNS是怎么解析的</h2><p><a href="https://www.cnblogs.com/gopark/p/8430916.html" target="_blank" rel="noopener">https://www.cnblogs.com/gopark/p/8430916.html</a></p>
+<h2 id="6、cdn"><a href="#6、cdn" class="headerlink" title="6、cdn"></a>6、cdn</h2><h2 id="7、计算机网络的相关协议"><a href="#7、计算机网络的相关协议" class="headerlink" title="7、计算机网络的相关协议"></a>7、计算机网络的相关协议</h2><h2 id="8、http-https-http2-0"><a href="#8、http-https-http2-0" class="headerlink" title="8、http/https/http2.0"></a>8、http/https/http2.0</h2><h2 id="9、get-post区别"><a href="#9、get-post区别" class="headerlink" title="9、get post区别"></a>9、get post区别</h2><h2 id="10、ajax、-axios库"><a href="#10、ajax、-axios库" class="headerlink" title="10、ajax、 axios库"></a>10、ajax、 axios库</h2><h2 id="11、tcp三次握手，四次挥手流程"><a href="#11、tcp三次握手，四次挥手流程" class="headerlink" title="11、tcp三次握手，四次挥手流程"></a>11、tcp三次握手，四次挥手流程</h2><h2 id="12、跨域"><a href="#12、跨域" class="headerlink" title="12、跨域"></a>12、跨域</h2><h2 id="13、前端安全XSS、CSRF"><a href="#13、前端安全XSS、CSRF" class="headerlink" title="13、前端安全XSS、CSRF"></a>13、前端安全XSS、CSRF</h2><h2 id="14、websocket"><a href="#14、websocket" class="headerlink" title="14、websocket"></a>14、websocket</h2><h2 id="15、Http请求中的keep-alive有了解吗"><a href="#15、Http请求中的keep-alive有了解吗" class="headerlink" title="15、Http请求中的keep-alive有了解吗"></a>15、Http请求中的keep-alive有了解吗</h2><h2 id="16、网络分层"><a href="#16、网络分层" class="headerlink" title="16、网络分层"></a>16、网络分层</h2><h2 id="17、即时通信，除了Ajax和websocket"><a href="#17、即时通信，除了Ajax和websocket" class="headerlink" title="17、即时通信，除了Ajax和websocket"></a>17、即时通信，除了Ajax和websocket</h2><h2 id="18、模块化，commonJS，es6，cmd，amd"><a href="#18、模块化，commonJS，es6，cmd，amd" class="headerlink" title="18、模块化，commonJS，es6，cmd，amd"></a>18、模块化，commonJS，es6，cmd，amd</h2><h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><h2 id="1、vue解决了什么问题"><a href="#1、vue解决了什么问题" class="headerlink" title="1、vue解决了什么问题"></a>1、vue解决了什么问题</h2><h2 id="2、MVVM的理解"><a href="#2、MVVM的理解" class="headerlink" title="2、MVVM的理解"></a>2、MVVM的理解</h2><h2 id="3、如何实现一个自定义组件，不同组件之间如何通信的？"><a href="#3、如何实现一个自定义组件，不同组件之间如何通信的？" class="headerlink" title="3、如何实现一个自定义组件，不同组件之间如何通信的？"></a>3、如何实现一个自定义组件，不同组件之间如何通信的？</h2><h2 id="4、nextTick"><a href="#4、nextTick" class="headerlink" title="4、nextTick"></a>4、nextTick</h2><h2 id="5、生命周期"><a href="#5、生命周期" class="headerlink" title="5、生命周期"></a>5、生命周期</h2><h2 id="6、虚拟dom的原理"><a href="#6、虚拟dom的原理" class="headerlink" title="6、虚拟dom的原理"></a>6、虚拟dom的原理</h2><h2 id="7、双向绑定的原理？数据劫持？"><a href="#7、双向绑定的原理？数据劫持？" class="headerlink" title="7、双向绑定的原理？数据劫持？"></a>7、双向绑定的原理？数据劫持？</h2><h2 id="8、组件通信"><a href="#8、组件通信" class="headerlink" title="8、组件通信"></a>8、组件通信</h2><p>父-&gt;子</p>
+<p>子-&gt;父</p>
+<p>非父子组件</p>
+<h2 id="9、Proxy-相比于-defineProperty-的优势"><a href="#9、Proxy-相比于-defineProperty-的优势" class="headerlink" title="9、Proxy 相比于 defineProperty 的优势"></a>9、Proxy 相比于 defineProperty 的优势</h2><h2 id="10、watch-computed区别"><a href="#10、watch-computed区别" class="headerlink" title="10、watch computed区别"></a>10、watch computed区别</h2><h2 id="11、virtual-dom-原理实现"><a href="#11、virtual-dom-原理实现" class="headerlink" title="11、virtual dom 原理实现"></a>11、virtual dom 原理实现</h2><h2 id="12、vue-router-hash，-HTML5-新增的-pushState"><a href="#12、vue-router-hash，-HTML5-新增的-pushState" class="headerlink" title="12、vue-router(hash， HTML5 新增的 pushState"></a>12、vue-router(hash， HTML5 新增的 pushState</h2><p>单页应用，如何实现其路由功能—路由原理</p>
+<p>vue-router如何做用户登录权限等</p>
+<p>你在项目中怎么实现路由的嵌套</p>
+<h2 id="13、vuex的理解"><a href="#13、vuex的理解" class="headerlink" title="13、vuex的理解"></a>13、vuex的理解</h2><h1 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h1><h2 id="1-页面DOM节点太多，会出现什么问题？如何优化？"><a href="#1-页面DOM节点太多，会出现什么问题？如何优化？" class="headerlink" title="1.页面DOM节点太多，会出现什么问题？如何优化？"></a>1.页面DOM节点太多，会出现什么问题？如何优化？</h2><h2 id="2-如何做性能监测"><a href="#2-如何做性能监测" class="headerlink" title="2.如何做性能监测"></a>2.如何做性能监测</h2><h2 id="3-SEO和语义化"><a href="#3-SEO和语义化" class="headerlink" title="3.SEO和语义化"></a>3.SEO和语义化</h2><h1 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h1><h2 id="微信小程序和h5差异，如果有开发weex的经验，可能会加上weex"><a href="#微信小程序和h5差异，如果有开发weex的经验，可能会加上weex" class="headerlink" title="微信小程序和h5差异，如果有开发weex的经验，可能会加上weex"></a>微信小程序和h5差异，如果有开发weex的经验，可能会加上weex</h2><h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="一些基本命令"><a href="#一些基本命令" class="headerlink" title="一些基本命令"></a>一些基本命令</h2><h1 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h1><h2 id="1、打包原理"><a href="#1、打包原理" class="headerlink" title="1、打包原理"></a>1、打包原理</h2><h2 id="2、打包插件"><a href="#2、打包插件" class="headerlink" title="2、打包插件"></a>2、打包插件</h2><h2 id="3、webpack热更新原理"><a href="#3、webpack热更新原理" class="headerlink" title="3、webpack热更新原理"></a>3、webpack热更新原理</h2><h2 id="4、优化构建速度"><a href="#4、优化构建速度" class="headerlink" title="4、优化构建速度"></a>4、优化构建速度</h2><h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h2 id="1、排序算法"><a href="#1、排序算法" class="headerlink" title="1、排序算法"></a>1、排序算法</h2><h2 id="2、动态规划，参见背包问题"><a href="#2、动态规划，参见背包问题" class="headerlink" title="2、动态规划，参见背包问题"></a>2、动态规划，参见背包问题</h2><h2 id="3、二叉树"><a href="#3、二叉树" class="headerlink" title="3、二叉树"></a>3、二叉树</h2><h2 id="4、加油站问题-贪心算法"><a href="#4、加油站问题-贪心算法" class="headerlink" title="4、加油站问题(贪心算法)"></a>4、加油站问题(贪心算法)</h2><h2 id="5、二分法"><a href="#5、二分法" class="headerlink" title="5、二分法"></a>5、二分法</h2><h2 id="6、二叉树遍历"><a href="#6、二叉树遍历" class="headerlink" title="6、二叉树遍历"></a>6、二叉树遍历</h2><h2 id="7、单链表反转"><a href="#7、单链表反转" class="headerlink" title="7、单链表反转"></a>7、单链表反转</h2><h2 id="8、取1000个数字里面的质数"><a href="#8、取1000个数字里面的质数" class="headerlink" title="8、取1000个数字里面的质数"></a>8、取1000个数字里面的质数</h2><h2 id="9、找出数组中和为给定值的两个元素，如：-1-2-3-4-5-中找出和为6的两个元素。"><a href="#9、找出数组中和为给定值的两个元素，如：-1-2-3-4-5-中找出和为6的两个元素。" class="headerlink" title="9、找出数组中和为给定值的两个元素，如：[1, 2, 3, 4, 5]中找出和为6的两个元素。"></a>9、找出数组中和为给定值的两个元素，如：[1, 2, 3, 4, 5]中找出和为6的两个元素。</h2><h2 id="10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点"><a href="#10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点" class="headerlink" title="10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点"></a>10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点</h2><h1 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h1><h2 id="1、自适应"><a href="#1、自适应" class="headerlink" title="1、自适应"></a>1、自适应</h2><h2 id="2、pwa"><a href="#2、pwa" class="headerlink" title="2、pwa"></a>2、pwa</h2><h2 id="3、移动端手势"><a href="#3、移动端手势" class="headerlink" title="3、移动端手势"></a>3、移动端手势</h2><h1 id="附加题"><a href="#附加题" class="headerlink" title="附加题"></a>附加题</h1><h2 id="1、无限滚动方案"><a href="#1、无限滚动方案" class="headerlink" title="1、无限滚动方案"></a>1、无限滚动方案</h2><h2 id="2、如何处理兼容性问题"><a href="#2、如何处理兼容性问题" class="headerlink" title="2、如何处理兼容性问题"></a>2、如何处理兼容性问题</h2><h2 id="3、你遇到过最难的问题是什么"><a href="#3、你遇到过最难的问题是什么" class="headerlink" title="3、你遇到过最难的问题是什么"></a>3、你遇到过最难的问题是什么</h2><h2 id="4、ES6-class与ES5-function区别及联系"><a href="#4、ES6-class与ES5-function区别及联系" class="headerlink" title="4、ES6 class与ES5 function区别及联系"></a>4、ES6 class与ES5 function区别及联系</h2><h2 id="5、vue怎么监听数组"><a href="#5、vue怎么监听数组" class="headerlink" title="5、vue怎么监听数组"></a>5、vue怎么监听数组</h2><h2 id="6、写过webpack-loader吗"><a href="#6、写过webpack-loader吗" class="headerlink" title="6、写过webpack loader吗"></a>6、写过webpack loader吗</h2><h2 id="7、微信网页版登录机制思考"><a href="#7、微信网页版登录机制思考" class="headerlink" title="7、微信网页版登录机制思考"></a>7、微信网页版登录机制思考</h2><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《前端常见问题汇总》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/22/mian-shi-ti/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                任振飞
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'a3cfa80fa2006490d7ac',
+        clientSecret: 'c3ae813406cdb797d351511e5dc973bbb927b198',
+        repo: 'renzhenfei666.github.io',
+        owner: 'renzhenfei666',
+        admin: "renzhenfei666",
+        id: '2019-08-22T11-49-26',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/08/22/zhui-shu-shen-qi-api-zheng-li/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="追书神器 API 整理">
+                        
+                        <span class="card-title">追书神器 API 整理</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前段时间使用追书神器的api做了一个微信小程序，现将追书神器api总结在下方
+
+
+追书神器api文档追书神器api官方地址:
+http://api.zhuishushenqi.com
+http://api05iye5.zhuishushen
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/api/" class="post-category" target="_blank">
+                                    api
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/api/" target="_blank">
+                        <span class="chip bg-color">api</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/08/21/this-apply-call-bind/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="this、apply、call、bind">
+                        
+                        <span class="card-title">this、apply、call、bind</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            这又是一个面试经典问题/(ㄒoㄒ)/也是 ES5中众多坑中的一个，在 ES6 中可能会极大避免 this 产生的错误，但是为了一些老代码的维护，最好还是了解一下 this 的指向和 call、apply、bind 三者的区别。
+
+
+this
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/javascript/" class="post-category" target="_blank">
+                                    javascript
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/javascript/" target="_blank">
+                        <span class="chip bg-color">javascript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 任振飞的博客<br />'
+            + '作者: 任振飞<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://blinkfox.github.io/" target="_blank">Blinkfox</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">8.7k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/renzhenfei666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:15651280002@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1367230472" class="tooltipped" data-tooltip="QQ联系我: 1367230472" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
