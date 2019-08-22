@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="css1、盒模型https://www.cnblogs.com/smyhvae/p/8512617.html https://segmentfault.com/a/1190000013069516 2、flexhttps://juejin.im/entry/58f6e7d3a0bb9f006ab54af9 https://developer.mozilla.org/zh-CN/docs/Web/C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题汇总">
+<meta property="og:url" content="http://yoursite.com/2019/08/22/面试题/index.html">
+<meta property="og:site_name" content="任振飞的博客">
+<meta property="og:description" content="css1、盒模型https://www.cnblogs.com/smyhvae/p/8512617.html https://segmentfault.com/a/1190000013069516 2、flexhttps://juejin.im/entry/58f6e7d3a0bb9f006ab54af9 https://developer.mozilla.org/zh-CN/docs/Web/C">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-22T03:56:07.763Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试题汇总">
+<meta name="twitter:description" content="css1、盒模型https://www.cnblogs.com/smyhvae/p/8512617.html https://segmentfault.com/a/1190000013069516 2、flexhttps://juejin.im/entry/58f6e7d3a0bb9f006ab54af9 https://developer.mozilla.org/zh-CN/docs/Web/C">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/22/面试题/">
+
+
+
+
+
+  <title>面试题汇总 | 任振飞的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">任振飞的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">关注前端</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/22/面试题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="任振飞">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="任振飞的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">面试题汇总</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-22T11:49:26+08:00">
+                2019-08-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.6k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="css"><a href="#css" class="headerlink" title="css"></a>css</h1><h2 id="1、盒模型"><a href="#1、盒模型" class="headerlink" title="1、盒模型"></a>1、盒模型</h2><p><a href="https://www.cnblogs.com/smyhvae/p/8512617.html" target="_blank" rel="noopener">https://www.cnblogs.com/smyhvae/p/8512617.html</a></p>
+<p><a href="https://segmentfault.com/a/1190000013069516" target="_blank" rel="noopener">https://segmentfault.com/a/1190000013069516</a></p>
+<h2 id="2、flex"><a href="#2、flex" class="headerlink" title="2、flex"></a>2、flex</h2><p><a href="https://juejin.im/entry/58f6e7d3a0bb9f006ab54af9" target="_blank" rel="noopener">https://juejin.im/entry/58f6e7d3a0bb9f006ab54af9</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/25303493" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/25303493</a></p>
+<p><a href="https://www.zhangxinxu.com/wordpress/2018/10/display-flex-css3-css/" target="_blank" rel="noopener">https://www.zhangxinxu.com/wordpress/2018/10/display-flex-css3-css/</a></p>
+<a id="more"></a>
+
+<h2 id="3、css单位"><a href="#3、css单位" class="headerlink" title="3、css单位"></a>3、css单位</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units</a></p>
+<h2 id="4、css选择器"><a href="#4、css选择器" class="headerlink" title="4、css选择器"></a>4、css选择器</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started/Selectors" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started/Selectors</a></p>
+<h2 id="5、bfc-清除浮动"><a href="#5、bfc-清除浮动" class="headerlink" title="5、bfc 清除浮动"></a>5、bfc 清除浮动</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context</a></p>
+<h2 id="6、层叠上下文"><a href="#6、层叠上下文" class="headerlink" title="6、层叠上下文"></a>6、层叠上下文</h2><p><a href="https://juejin.im/entry/5b877692f265da432008a5f9" target="_blank" rel="noopener">https://juejin.im/entry/5b877692f265da432008a5f9</a></p>
+<h2 id="7、常见页面布局"><a href="#7、常见页面布局" class="headerlink" title="7、常见页面布局"></a>7、常见页面布局</h2><p><a href="https://juejin.im/entry/5aa7246ff265da239f070791" target="_blank" rel="noopener">https://juejin.im/entry/5aa7246ff265da239f070791</a></p>
+<h2 id="8、响应式布局"><a href="#8、响应式布局" class="headerlink" title="8、响应式布局"></a>8、响应式布局</h2><p><a href="https://juejin.im/entry/5caaa4a6e51d452b230d6129" target="_blank" rel="noopener">https://juejin.im/entry/5caaa4a6e51d452b230d6129</a></p>
+<h2 id="9、css预处理，后处理"><a href="#9、css预处理，后处理" class="headerlink" title="9、css预处理，后处理"></a>9、css预处理，后处理</h2><p><a href="https://blog.csdn.net/yushuangyushuang/article/details/79209752" target="_blank" rel="noopener">https://blog.csdn.net/yushuangyushuang/article/details/79209752</a></p>
+<h2 id="10、css3新特性"><a href="#10、css3新特性" class="headerlink" title="10、css3新特性"></a>10、css3新特性</h2><p><a href="https://blog.csdn.net/pcaxb/article/details/87251949" target="_blank" rel="noopener">https://blog.csdn.net/pcaxb/article/details/87251949</a></p>
+<p><a href="https://juejin.im/entry/595f1e3c5188250d914dd53c" target="_blank" rel="noopener">https://juejin.im/entry/595f1e3c5188250d914dd53c</a></p>
+<p>animation和transiton的相关属性</p>
+<p>animate和translate</p>
+<p><a href="https://juejin.im/entry/5b137f2f5188257d3a69659d" target="_blank" rel="noopener">https://juejin.im/entry/5b137f2f5188257d3a69659d</a></p>
+<h2 id="11、display哪些取值"><a href="#11、display哪些取值" class="headerlink" title="11、display哪些取值"></a>11、display哪些取值</h2><h2 id="12、相邻的两个inline-block节点为什么会出现间隔，该如何解决"><a href="#12、相邻的两个inline-block节点为什么会出现间隔，该如何解决" class="headerlink" title="12、相邻的两个inline-block节点为什么会出现间隔，该如何解决"></a>12、相邻的两个inline-block节点为什么会出现间隔，该如何解决</h2><h2 id="13、meta-viewport-移动端适配"><a href="#13、meta-viewport-移动端适配" class="headerlink" title="13、meta viewport 移动端适配"></a>13、meta viewport 移动端适配</h2><h2 id="14、CSS实现宽度自适应100-，宽高16-9的比例的矩形"><a href="#14、CSS实现宽度自适应100-，宽高16-9的比例的矩形" class="headerlink" title="14、CSS实现宽度自适应100%，宽高16:9的比例的矩形"></a>14、CSS实现宽度自适应100%，宽高16:9的比例的矩形</h2><h2 id="15、rem布局的优缺点"><a href="#15、rem布局的优缺点" class="headerlink" title="15、rem布局的优缺点"></a>15、rem布局的优缺点</h2><h2 id="16、画三角形"><a href="#16、画三角形" class="headerlink" title="16、画三角形"></a>16、画三角形</h2><h2 id="17、1像素边框问题"><a href="#17、1像素边框问题" class="headerlink" title="17、1像素边框问题"></a>17、1像素边框问题</h2><h1 id="html"><a href="#html" class="headerlink" title="html"></a>html</h1><h2 id="1、语义化"><a href="#1、语义化" class="headerlink" title="1、语义化"></a>1、语义化</h2><h2 id="2、新标签新特性"><a href="#2、新标签新特性" class="headerlink" title="2、新标签新特性"></a>2、新标签新特性</h2><h2 id="3、input和textarea的区别"><a href="#3、input和textarea的区别" class="headerlink" title="3、input和textarea的区别"></a>3、input和textarea的区别</h2><h2 id="4、用一个div模拟textarea的实现"><a href="#4、用一个div模拟textarea的实现" class="headerlink" title="4、用一个div模拟textarea的实现"></a>4、用一个div模拟textarea的实现</h2><p>内容可编辑 contenteditable</p>
+<p>​    对就是contenteditable，给div添加contenteditable=true即可</p>
+<h2 id="5、移动设备忽略将页面中的数字识别为电话号码的方法"><a href="#5、移动设备忽略将页面中的数字识别为电话号码的方法" class="headerlink" title="5、移动设备忽略将页面中的数字识别为电话号码的方法"></a>5、移动设备忽略将页面中的数字识别为电话号码的方法</h2><h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><h2 id="1、原型-原型链-构造函数-实例-继承"><a href="#1、原型-原型链-构造函数-实例-继承" class="headerlink" title="1、原型/原型链/构造函数/实例/继承"></a>1、原型/原型链/构造函数/实例/继承</h2><h2 id="2、有几种方式可以实现继承"><a href="#2、有几种方式可以实现继承" class="headerlink" title="2、有几种方式可以实现继承"></a>2、有几种方式可以实现继承</h2><h2 id="3、用原型实现继承有什么缺点，怎么解决"><a href="#3、用原型实现继承有什么缺点，怎么解决" class="headerlink" title="3、用原型实现继承有什么缺点，怎么解决"></a>3、用原型实现继承有什么缺点，怎么解决</h2><h2 id="4、arguments"><a href="#4、arguments" class="headerlink" title="4、arguments"></a>4、arguments</h2><h2 id="5、数据类型判断"><a href="#5、数据类型判断" class="headerlink" title="5、数据类型判断"></a>5、数据类型判断</h2><h2 id="6、作用域链、闭包、作用域"><a href="#6、作用域链、闭包、作用域" class="headerlink" title="6、作用域链、闭包、作用域"></a>6、作用域链、闭包、作用域</h2><h2 id="7、Ajax的原生写法"><a href="#7、Ajax的原生写法" class="headerlink" title="7、Ajax的原生写法"></a>7、Ajax的原生写法</h2><h2 id="8、对象深拷贝、浅拷贝"><a href="#8、对象深拷贝、浅拷贝" class="headerlink" title="8、对象深拷贝、浅拷贝"></a>8、对象深拷贝、浅拷贝</h2><h2 id="9、图片懒加载、预加载"><a href="#9、图片懒加载、预加载" class="headerlink" title="9、图片懒加载、预加载"></a>9、图片懒加载、预加载</h2><h2 id="10、实现页面加载进度条"><a href="#10、实现页面加载进度条" class="headerlink" title="10、实现页面加载进度条"></a>10、实现页面加载进度条</h2><h2 id="11、this关键字"><a href="#11、this关键字" class="headerlink" title="11、this关键字"></a>11、this关键字</h2><h2 id="12、函数式编程"><a href="#12、函数式编程" class="headerlink" title="12、函数式编程"></a>12、函数式编程</h2><h2 id="13、手动实现parseInt"><a href="#13、手动实现parseInt" class="headerlink" title="13、手动实现parseInt"></a>13、手动实现parseInt</h2><h2 id="14、为什么会有同源策略"><a href="#14、为什么会有同源策略" class="headerlink" title="14、为什么会有同源策略"></a>14、为什么会有同源策略</h2><h2 id="15、怎么判断两个对象是否相等"><a href="#15、怎么判断两个对象是否相等" class="headerlink" title="15、怎么判断两个对象是否相等"></a>15、怎么判断两个对象是否相等</h2><h2 id="16、事件模型"><a href="#16、事件模型" class="headerlink" title="16、事件模型"></a>16、事件模型</h2><p>事件委托、代理</p>
+<p>如何让事件先冒泡后捕获</p>
+<h2 id="17、window的onload事件和domcontentloaded"><a href="#17、window的onload事件和domcontentloaded" class="headerlink" title="17、window的onload事件和domcontentloaded"></a>17、window的onload事件和domcontentloaded</h2><h2 id="18、for…in迭代和for…of有什么区别"><a href="#18、for…in迭代和for…of有什么区别" class="headerlink" title="18、for…in迭代和for…of有什么区别"></a>18、for…in迭代和for…of有什么区别</h2><h2 id="19、函数柯里化"><a href="#19、函数柯里化" class="headerlink" title="19、函数柯里化"></a>19、函数柯里化</h2><h2 id="20、call-apply区别，原生实现bind"><a href="#20、call-apply区别，原生实现bind" class="headerlink" title="20、call apply区别，原生实现bind"></a>20、call apply区别，原生实现bind</h2><p>call，apply，bind 三者用法和区别：角度可为参数、绑定规则（显示绑定和强绑定），运行效率、运行情况。</p>
+<h2 id="21、async-await"><a href="#21、async-await" class="headerlink" title="21、async/await"></a>21、async/await</h2><h2 id="22、立即执行函数和使用场景"><a href="#22、立即执行函数和使用场景" class="headerlink" title="22、立即执行函数和使用场景"></a>22、立即执行函数和使用场景</h2><h2 id="23、设计模式-要求说出如何实现-应用-优缺点-单例模式实现"><a href="#23、设计模式-要求说出如何实现-应用-优缺点-单例模式实现" class="headerlink" title="23、设计模式(要求说出如何实现,应用,优缺点)/单例模式实现"></a>23、设计模式(要求说出如何实现,应用,优缺点)/单例模式实现</h2><h2 id="24、iframe的缺点有哪些"><a href="#24、iframe的缺点有哪些" class="headerlink" title="24、iframe的缺点有哪些"></a>24、iframe的缺点有哪些</h2><h2 id="25、数组问题"><a href="#25、数组问题" class="headerlink" title="25、数组问题"></a>25、数组问题</h2><p>数组去重</p>
+<p>数组常用方法</p>
+<p>查找数组重复项</p>
+<p>扁平化数组</p>
+<p>按数组中各项和特定值差值排序</p>
+<h2 id="26、BOM属性对象方法"><a href="#26、BOM属性对象方法" class="headerlink" title="26、BOM属性对象方法"></a>26、BOM属性对象方法</h2><h2 id="27、服务端渲染"><a href="#27、服务端渲染" class="headerlink" title="27、服务端渲染"></a>27、服务端渲染</h2><h2 id="28、垃圾回收机制"><a href="#28、垃圾回收机制" class="headerlink" title="28、垃圾回收机制"></a>28、垃圾回收机制</h2><h2 id="29、eventloop"><a href="#29、eventloop" class="headerlink" title="29、eventloop"></a>29、eventloop</h2><p>进程和线程</p>
+<p>任务队列</p>
+<h2 id="30、如何快速让字符串变成已千为精度的数字"><a href="#30、如何快速让字符串变成已千为精度的数字" class="headerlink" title="30、如何快速让字符串变成已千为精度的数字"></a>30、如何快速让字符串变成已千为精度的数字</h2><h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h2 id="1、声明-let、const"><a href="#1、声明-let、const" class="headerlink" title="1、声明 let、const"></a>1、声明 let、const</h2><h2 id="2、解构赋值"><a href="#2、解构赋值" class="headerlink" title="2、解构赋值"></a>2、解构赋值</h2><h2 id="3、声明类与继承：class、extend"><a href="#3、声明类与继承：class、extend" class="headerlink" title="3、声明类与继承：class、extend"></a>3、声明类与继承：class、extend</h2><h2 id="4、Promise的使用与实现"><a href="#4、Promise的使用与实现" class="headerlink" title="4、Promise的使用与实现"></a>4、Promise的使用与实现</h2><h2 id="5、generator（异步编程、yield、next-、await-、async）"><a href="#5、generator（异步编程、yield、next-、await-、async）" class="headerlink" title="5、generator（异步编程、yield、next()、await 、async）"></a>5、generator（异步编程、yield、next()、await 、async）</h2><h2 id="6、箭头函数this指向问题、拓展运算符"><a href="#6、箭头函数this指向问题、拓展运算符" class="headerlink" title="6、箭头函数this指向问题、拓展运算符"></a>6、箭头函数this指向问题、拓展运算符</h2><h2 id="7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？"><a href="#7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？" class="headerlink" title="7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？"></a>7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？</h2><h2 id="8、ES6怎么编译成ES5-css-loader原理-过程"><a href="#8、ES6怎么编译成ES5-css-loader原理-过程" class="headerlink" title="8、ES6怎么编译成ES5,css-loader原理,过程"></a>8、ES6怎么编译成ES5,css-loader原理,过程</h2><h2 id="9、ES6转成ES5的常见例子"><a href="#9、ES6转成ES5的常见例子" class="headerlink" title="9、ES6转成ES5的常见例子"></a>9、ES6转成ES5的常见例子</h2><p>使用es5实现es6的class</p>
+<h1 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><h2 id="1、输入url到展示页面过程发生了什么？"><a href="#1、输入url到展示页面过程发生了什么？" class="headerlink" title="1、输入url到展示页面过程发生了什么？"></a>1、输入url到展示页面过程发生了什么？</h2><h2 id="2、重绘与回流"><a href="#2、重绘与回流" class="headerlink" title="2、重绘与回流"></a>2、重绘与回流</h2><p>重绘(repaint): 当元素样式的改变不影响布局时，浏览器将使用重绘对元素进行更新，此时由于只需要UI层面的重新像素绘制，因此 损耗较少</p>
+<p>回流(reflow): 当元素的尺寸、结构或触发某些属性时，浏览器会重新渲染页面，称为回流。此时，浏览器需要重新经过计算，计算后还需要重新页面布局，因此是较重的操作。会触发回流的操作:</p>
+<p>页面初次渲染</p>
+<p>浏览器窗口大小改变</p>
+<p>元素尺寸、位置、内容发生改变</p>
+<p>元素字体大小变化</p>
+<p>添加或者删除可见的 dom 元素</p>
+<p>激活 CSS 伪类（例如：:hover）</p>
+<p>查询某些属性或调用某些方法</p>
+<p>clientWidth、clientHeight、clientTop、clientLeft</p>
+<p>offsetWidth、offsetHeight、offsetTop、offsetLeft</p>
+<p>scrollWidth、scrollHeight、scrollTop、scrollLeft</p>
+<p>getComputedStyle()</p>
+<p>getBoundingClientRect()</p>
+<p>scrollTo()<br>回流必定触发重绘，重绘不一定触发回流。重绘的开销较小，回流的代价较高。</p>
+<h2 id="3、防抖与节流"><a href="#3、防抖与节流" class="headerlink" title="3、防抖与节流"></a>3、防抖与节流</h2><h2 id="4、cookies、session、sessionStorage、localStorage"><a href="#4、cookies、session、sessionStorage、localStorage" class="headerlink" title="4、cookies、session、sessionStorage、localStorage"></a>4、cookies、session、sessionStorage、localStorage</h2><h2 id="5、浏览器内核"><a href="#5、浏览器内核" class="headerlink" title="5、浏览器内核"></a>5、浏览器内核</h2><h1 id="服务端与网络"><a href="#服务端与网络" class="headerlink" title="服务端与网络"></a>服务端与网络</h1><h2 id="1、常见状态码"><a href="#1、常见状态码" class="headerlink" title="1、常见状态码"></a>1、常见状态码</h2><h2 id="2、缓存"><a href="#2、缓存" class="headerlink" title="2、缓存"></a>2、缓存</h2><p>200 From cache和200 ok</p>
+<p>400,401,403状态码分别代表什么</p>
+<p>浏览器缓存</p>
+<h2 id="3、cookie-session-token"><a href="#3、cookie-session-token" class="headerlink" title="3、cookie, session, token"></a>3、cookie, session, token</h2><h2 id="4、前端持久化的方式、区别"><a href="#4、前端持久化的方式、区别" class="headerlink" title="4、前端持久化的方式、区别"></a>4、前端持久化的方式、区别</h2><h2 id="5、DNS是怎么解析的"><a href="#5、DNS是怎么解析的" class="headerlink" title="5、DNS是怎么解析的"></a>5、DNS是怎么解析的</h2><h2 id="6、cdn"><a href="#6、cdn" class="headerlink" title="6、cdn"></a>6、cdn</h2><h2 id="7、计算机网络的相关协议"><a href="#7、计算机网络的相关协议" class="headerlink" title="7、计算机网络的相关协议"></a>7、计算机网络的相关协议</h2><h2 id="8、http-https-http2-0"><a href="#8、http-https-http2-0" class="headerlink" title="8、http/https/http2.0"></a>8、http/https/http2.0</h2><h2 id="9、get-post区别"><a href="#9、get-post区别" class="headerlink" title="9、get post区别"></a>9、get post区别</h2><h2 id="10、ajax、-axios库"><a href="#10、ajax、-axios库" class="headerlink" title="10、ajax、 axios库"></a>10、ajax、 axios库</h2><h2 id="11、tcp三次握手，四次挥手流程"><a href="#11、tcp三次握手，四次挥手流程" class="headerlink" title="11、tcp三次握手，四次挥手流程"></a>11、tcp三次握手，四次挥手流程</h2><h2 id="12、跨域"><a href="#12、跨域" class="headerlink" title="12、跨域"></a>12、跨域</h2><h2 id="13、前端安全XSS、CSRF"><a href="#13、前端安全XSS、CSRF" class="headerlink" title="13、前端安全XSS、CSRF"></a>13、前端安全XSS、CSRF</h2><h2 id="14、websocket"><a href="#14、websocket" class="headerlink" title="14、websocket"></a>14、websocket</h2><h2 id="15、Http请求中的keep-alive有了解吗"><a href="#15、Http请求中的keep-alive有了解吗" class="headerlink" title="15、Http请求中的keep-alive有了解吗"></a>15、Http请求中的keep-alive有了解吗</h2><h2 id="16、网络分层"><a href="#16、网络分层" class="headerlink" title="16、网络分层"></a>16、网络分层</h2><h2 id="17、即时通信，除了Ajax和websocket"><a href="#17、即时通信，除了Ajax和websocket" class="headerlink" title="17、即时通信，除了Ajax和websocket"></a>17、即时通信，除了Ajax和websocket</h2><h2 id="18、模块化，commonJS，es6，cmd，amd"><a href="#18、模块化，commonJS，es6，cmd，amd" class="headerlink" title="18、模块化，commonJS，es6，cmd，amd"></a>18、模块化，commonJS，es6，cmd，amd</h2><h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><h2 id="1、vue解决了什么问题"><a href="#1、vue解决了什么问题" class="headerlink" title="1、vue解决了什么问题"></a>1、vue解决了什么问题</h2><h2 id="2、MVVM的理解"><a href="#2、MVVM的理解" class="headerlink" title="2、MVVM的理解"></a>2、MVVM的理解</h2><h2 id="3、如何实现一个自定义组件，不同组件之间如何通信的？"><a href="#3、如何实现一个自定义组件，不同组件之间如何通信的？" class="headerlink" title="3、如何实现一个自定义组件，不同组件之间如何通信的？"></a>3、如何实现一个自定义组件，不同组件之间如何通信的？</h2><h2 id="4、nextTick"><a href="#4、nextTick" class="headerlink" title="4、nextTick"></a>4、nextTick</h2><h2 id="5、生命周期"><a href="#5、生命周期" class="headerlink" title="5、生命周期"></a>5、生命周期</h2><h2 id="6、虚拟dom的原理"><a href="#6、虚拟dom的原理" class="headerlink" title="6、虚拟dom的原理"></a>6、虚拟dom的原理</h2><h2 id="7、双向绑定的原理？数据劫持？"><a href="#7、双向绑定的原理？数据劫持？" class="headerlink" title="7、双向绑定的原理？数据劫持？"></a>7、双向绑定的原理？数据劫持？</h2><h2 id="8、组件通信"><a href="#8、组件通信" class="headerlink" title="8、组件通信"></a>8、组件通信</h2><p>父-&gt;子</p>
+<p>子-&gt;父</p>
+<p>非父子组件</p>
+<h2 id="9、Proxy-相比于-defineProperty-的优势"><a href="#9、Proxy-相比于-defineProperty-的优势" class="headerlink" title="9、Proxy 相比于 defineProperty 的优势"></a>9、Proxy 相比于 defineProperty 的优势</h2><h2 id="10、watch-computed区别"><a href="#10、watch-computed区别" class="headerlink" title="10、watch computed区别"></a>10、watch computed区别</h2><h2 id="11、virtual-dom-原理实现"><a href="#11、virtual-dom-原理实现" class="headerlink" title="11、virtual dom 原理实现"></a>11、virtual dom 原理实现</h2><h2 id="12、vue-router-hash，-HTML5-新增的-pushState"><a href="#12、vue-router-hash，-HTML5-新增的-pushState" class="headerlink" title="12、vue-router(hash， HTML5 新增的 pushState"></a>12、vue-router(hash， HTML5 新增的 pushState</h2><p>单页应用，如何实现其路由功能—路由原理</p>
+<p>vue-router如何做用户登录权限等</p>
+<p>你在项目中怎么实现路由的嵌套</p>
+<h2 id="13、vuex的理解"><a href="#13、vuex的理解" class="headerlink" title="13、vuex的理解"></a>13、vuex的理解</h2><h1 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h1><h2 id="1-页面DOM节点太多，会出现什么问题？如何优化？"><a href="#1-页面DOM节点太多，会出现什么问题？如何优化？" class="headerlink" title="1.页面DOM节点太多，会出现什么问题？如何优化？"></a>1.页面DOM节点太多，会出现什么问题？如何优化？</h2><h2 id="2-如何做性能监测"><a href="#2-如何做性能监测" class="headerlink" title="2.如何做性能监测"></a>2.如何做性能监测</h2><h2 id="3-SEO和语义化"><a href="#3-SEO和语义化" class="headerlink" title="3.SEO和语义化"></a>3.SEO和语义化</h2><h1 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h1><h2 id="微信小程序和h5差异，如果有开发weex的经验，可能会加上weex"><a href="#微信小程序和h5差异，如果有开发weex的经验，可能会加上weex" class="headerlink" title="微信小程序和h5差异，如果有开发weex的经验，可能会加上weex"></a>微信小程序和h5差异，如果有开发weex的经验，可能会加上weex</h2><h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="一些基本命令"><a href="#一些基本命令" class="headerlink" title="一些基本命令"></a>一些基本命令</h2><h1 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h1><h2 id="1、打包原理"><a href="#1、打包原理" class="headerlink" title="1、打包原理"></a>1、打包原理</h2><h2 id="2、打包插件"><a href="#2、打包插件" class="headerlink" title="2、打包插件"></a>2、打包插件</h2><h2 id="3、webpack热更新原理"><a href="#3、webpack热更新原理" class="headerlink" title="3、webpack热更新原理"></a>3、webpack热更新原理</h2><h2 id="4、优化构建速度"><a href="#4、优化构建速度" class="headerlink" title="4、优化构建速度"></a>4、优化构建速度</h2><h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h2 id="1、排序算法"><a href="#1、排序算法" class="headerlink" title="1、排序算法"></a>1、排序算法</h2><h2 id="2、动态规划，参见背包问题"><a href="#2、动态规划，参见背包问题" class="headerlink" title="2、动态规划，参见背包问题"></a>2、动态规划，参见背包问题</h2><h2 id="3、二叉树"><a href="#3、二叉树" class="headerlink" title="3、二叉树"></a>3、二叉树</h2><h2 id="4、加油站问题-贪心算法"><a href="#4、加油站问题-贪心算法" class="headerlink" title="4、加油站问题(贪心算法)"></a>4、加油站问题(贪心算法)</h2><h2 id="5、二分法"><a href="#5、二分法" class="headerlink" title="5、二分法"></a>5、二分法</h2><h2 id="6、二叉树遍历"><a href="#6、二叉树遍历" class="headerlink" title="6、二叉树遍历"></a>6、二叉树遍历</h2><h2 id="7、单链表反转"><a href="#7、单链表反转" class="headerlink" title="7、单链表反转"></a>7、单链表反转</h2><h2 id="8、取1000个数字里面的质数"><a href="#8、取1000个数字里面的质数" class="headerlink" title="8、取1000个数字里面的质数"></a>8、取1000个数字里面的质数</h2><h2 id="9、找出数组中和为给定值的两个元素，如：-1-2-3-4-5-中找出和为6的两个元素。"><a href="#9、找出数组中和为给定值的两个元素，如：-1-2-3-4-5-中找出和为6的两个元素。" class="headerlink" title="9、找出数组中和为给定值的两个元素，如：[1, 2, 3, 4, 5]中找出和为6的两个元素。"></a>9、找出数组中和为给定值的两个元素，如：[1, 2, 3, 4, 5]中找出和为6的两个元素。</h2><h2 id="10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点"><a href="#10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点" class="headerlink" title="10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点"></a>10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点</h2><h1 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h1><h2 id="1、自适应"><a href="#1、自适应" class="headerlink" title="1、自适应"></a>1、自适应</h2><h2 id="2、pwa"><a href="#2、pwa" class="headerlink" title="2、pwa"></a>2、pwa</h2><h2 id="3、移动端手势"><a href="#3、移动端手势" class="headerlink" title="3、移动端手势"></a>3、移动端手势</h2><h1 id="附加题"><a href="#附加题" class="headerlink" title="附加题"></a>附加题</h1><h2 id="1、无限滚动方案"><a href="#1、无限滚动方案" class="headerlink" title="1、无限滚动方案"></a>1、无限滚动方案</h2><h2 id="2、如何处理兼容性问题"><a href="#2、如何处理兼容性问题" class="headerlink" title="2、如何处理兼容性问题"></a>2、如何处理兼容性问题</h2><h2 id="3、你遇到过最难的问题是什么"><a href="#3、你遇到过最难的问题是什么" class="headerlink" title="3、你遇到过最难的问题是什么"></a>3、你遇到过最难的问题是什么</h2><h2 id="4、ES6-class与ES5-function区别及联系"><a href="#4、ES6-class与ES5-function区别及联系" class="headerlink" title="4、ES6 class与ES5 function区别及联系"></a>4、ES6 class与ES5 function区别及联系</h2><h2 id="5、vue怎么监听数组"><a href="#5、vue怎么监听数组" class="headerlink" title="5、vue怎么监听数组"></a>5、vue怎么监听数组</h2><h2 id="6、写过webpack-loader吗"><a href="#6、写过webpack-loader吗" class="headerlink" title="6、写过webpack loader吗"></a>6、写过webpack loader吗</h2><h2 id="7、微信网页版登录机制思考"><a href="#7、微信网页版登录机制思考" class="headerlink" title="7、微信网页版登录机制思考"></a>7、微信网页版登录机制思考</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+      
+    </div>
+    
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/21/this、apply、call、bind/" rel="next" title="this、apply、call、bind">
+                <i class="fa fa-chevron-left"></i> this、apply、call、bind
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="任振飞">
+            
+              <p class="site-author-name" itemprop="name">任振飞</p>
+              <p class="site-description motion-element" itemprop="description">前端技术博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#css"><span class="nav-number">1.</span> <span class="nav-text">css</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、盒模型"><span class="nav-number">1.1.</span> <span class="nav-text">1、盒模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、flex"><span class="nav-number">1.2.</span> <span class="nav-text">2、flex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、css单位"><span class="nav-number">1.3.</span> <span class="nav-text">3、css单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、css选择器"><span class="nav-number">1.4.</span> <span class="nav-text">4、css选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、bfc-清除浮动"><span class="nav-number">1.5.</span> <span class="nav-text">5、bfc 清除浮动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、层叠上下文"><span class="nav-number">1.6.</span> <span class="nav-text">6、层叠上下文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、常见页面布局"><span class="nav-number">1.7.</span> <span class="nav-text">7、常见页面布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、响应式布局"><span class="nav-number">1.8.</span> <span class="nav-text">8、响应式布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、css预处理，后处理"><span class="nav-number">1.9.</span> <span class="nav-text">9、css预处理，后处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、css3新特性"><span class="nav-number">1.10.</span> <span class="nav-text">10、css3新特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、display哪些取值"><span class="nav-number">1.11.</span> <span class="nav-text">11、display哪些取值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、相邻的两个inline-block节点为什么会出现间隔，该如何解决"><span class="nav-number">1.12.</span> <span class="nav-text">12、相邻的两个inline-block节点为什么会出现间隔，该如何解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13、meta-viewport-移动端适配"><span class="nav-number">1.13.</span> <span class="nav-text">13、meta viewport 移动端适配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14、CSS实现宽度自适应100-，宽高16-9的比例的矩形"><span class="nav-number">1.14.</span> <span class="nav-text">14、CSS实现宽度自适应100%，宽高16:9的比例的矩形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15、rem布局的优缺点"><span class="nav-number">1.15.</span> <span class="nav-text">15、rem布局的优缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16、画三角形"><span class="nav-number">1.16.</span> <span class="nav-text">16、画三角形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17、1像素边框问题"><span class="nav-number">1.17.</span> <span class="nav-text">17、1像素边框问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#html"><span class="nav-number">2.</span> <span class="nav-text">html</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、语义化"><span class="nav-number">2.1.</span> <span class="nav-text">1、语义化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、新标签新特性"><span class="nav-number">2.2.</span> <span class="nav-text">2、新标签新特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、input和textarea的区别"><span class="nav-number">2.3.</span> <span class="nav-text">3、input和textarea的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、用一个div模拟textarea的实现"><span class="nav-number">2.4.</span> <span class="nav-text">4、用一个div模拟textarea的实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、移动设备忽略将页面中的数字识别为电话号码的方法"><span class="nav-number">2.5.</span> <span class="nav-text">5、移动设备忽略将页面中的数字识别为电话号码的方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript"><span class="nav-number">3.</span> <span class="nav-text">javascript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、原型-原型链-构造函数-实例-继承"><span class="nav-number">3.1.</span> <span class="nav-text">1、原型/原型链/构造函数/实例/继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、有几种方式可以实现继承"><span class="nav-number">3.2.</span> <span class="nav-text">2、有几种方式可以实现继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、用原型实现继承有什么缺点，怎么解决"><span class="nav-number">3.3.</span> <span class="nav-text">3、用原型实现继承有什么缺点，怎么解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、arguments"><span class="nav-number">3.4.</span> <span class="nav-text">4、arguments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、数据类型判断"><span class="nav-number">3.5.</span> <span class="nav-text">5、数据类型判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、作用域链、闭包、作用域"><span class="nav-number">3.6.</span> <span class="nav-text">6、作用域链、闭包、作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、Ajax的原生写法"><span class="nav-number">3.7.</span> <span class="nav-text">7、Ajax的原生写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、对象深拷贝、浅拷贝"><span class="nav-number">3.8.</span> <span class="nav-text">8、对象深拷贝、浅拷贝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、图片懒加载、预加载"><span class="nav-number">3.9.</span> <span class="nav-text">9、图片懒加载、预加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、实现页面加载进度条"><span class="nav-number">3.10.</span> <span class="nav-text">10、实现页面加载进度条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、this关键字"><span class="nav-number">3.11.</span> <span class="nav-text">11、this关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、函数式编程"><span class="nav-number">3.12.</span> <span class="nav-text">12、函数式编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13、手动实现parseInt"><span class="nav-number">3.13.</span> <span class="nav-text">13、手动实现parseInt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14、为什么会有同源策略"><span class="nav-number">3.14.</span> <span class="nav-text">14、为什么会有同源策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15、怎么判断两个对象是否相等"><span class="nav-number">3.15.</span> <span class="nav-text">15、怎么判断两个对象是否相等</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16、事件模型"><span class="nav-number">3.16.</span> <span class="nav-text">16、事件模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17、window的onload事件和domcontentloaded"><span class="nav-number">3.17.</span> <span class="nav-text">17、window的onload事件和domcontentloaded</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18、for…in迭代和for…of有什么区别"><span class="nav-number">3.18.</span> <span class="nav-text">18、for…in迭代和for…of有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19、函数柯里化"><span class="nav-number">3.19.</span> <span class="nav-text">19、函数柯里化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20、call-apply区别，原生实现bind"><span class="nav-number">3.20.</span> <span class="nav-text">20、call apply区别，原生实现bind</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21、async-await"><span class="nav-number">3.21.</span> <span class="nav-text">21、async/await</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22、立即执行函数和使用场景"><span class="nav-number">3.22.</span> <span class="nav-text">22、立即执行函数和使用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23、设计模式-要求说出如何实现-应用-优缺点-单例模式实现"><span class="nav-number">3.23.</span> <span class="nav-text">23、设计模式(要求说出如何实现,应用,优缺点)/单例模式实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24、iframe的缺点有哪些"><span class="nav-number">3.24.</span> <span class="nav-text">24、iframe的缺点有哪些</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25、数组问题"><span class="nav-number">3.25.</span> <span class="nav-text">25、数组问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26、BOM属性对象方法"><span class="nav-number">3.26.</span> <span class="nav-text">26、BOM属性对象方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27、服务端渲染"><span class="nav-number">3.27.</span> <span class="nav-text">27、服务端渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28、垃圾回收机制"><span class="nav-number">3.28.</span> <span class="nav-text">28、垃圾回收机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29、eventloop"><span class="nav-number">3.29.</span> <span class="nav-text">29、eventloop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30、如何快速让字符串变成已千为精度的数字"><span class="nav-number">3.30.</span> <span class="nav-text">30、如何快速让字符串变成已千为精度的数字</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ES6"><span class="nav-number">4.</span> <span class="nav-text">ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、声明-let、const"><span class="nav-number">4.1.</span> <span class="nav-text">1、声明 let、const</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、解构赋值"><span class="nav-number">4.2.</span> <span class="nav-text">2、解构赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、声明类与继承：class、extend"><span class="nav-number">4.3.</span> <span class="nav-text">3、声明类与继承：class、extend</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、Promise的使用与实现"><span class="nav-number">4.4.</span> <span class="nav-text">4、Promise的使用与实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、generator（异步编程、yield、next-、await-、async）"><span class="nav-number">4.5.</span> <span class="nav-text">5、generator（异步编程、yield、next()、await 、async）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、箭头函数this指向问题、拓展运算符"><span class="nav-number">4.6.</span> <span class="nav-text">6、箭头函数this指向问题、拓展运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？"><span class="nav-number">4.7.</span> <span class="nav-text">7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、ES6怎么编译成ES5-css-loader原理-过程"><span class="nav-number">4.8.</span> <span class="nav-text">8、ES6怎么编译成ES5,css-loader原理,过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、ES6转成ES5的常见例子"><span class="nav-number">4.9.</span> <span class="nav-text">9、ES6转成ES5的常见例子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浏览器"><span class="nav-number">5.</span> <span class="nav-text">浏览器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、输入url到展示页面过程发生了什么？"><span class="nav-number">5.1.</span> <span class="nav-text">1、输入url到展示页面过程发生了什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、重绘与回流"><span class="nav-number">5.2.</span> <span class="nav-text">2、重绘与回流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、防抖与节流"><span class="nav-number">5.3.</span> <span class="nav-text">3、防抖与节流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、cookies、session、sessionStorage、localStorage"><span class="nav-number">5.4.</span> <span class="nav-text">4、cookies、session、sessionStorage、localStorage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、浏览器内核"><span class="nav-number">5.5.</span> <span class="nav-text">5、浏览器内核</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务端与网络"><span class="nav-number">6.</span> <span class="nav-text">服务端与网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、常见状态码"><span class="nav-number">6.1.</span> <span class="nav-text">1、常见状态码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、缓存"><span class="nav-number">6.2.</span> <span class="nav-text">2、缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、cookie-session-token"><span class="nav-number">6.3.</span> <span class="nav-text">3、cookie, session, token</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、前端持久化的方式、区别"><span class="nav-number">6.4.</span> <span class="nav-text">4、前端持久化的方式、区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、DNS是怎么解析的"><span class="nav-number">6.5.</span> <span class="nav-text">5、DNS是怎么解析的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、cdn"><span class="nav-number">6.6.</span> <span class="nav-text">6、cdn</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、计算机网络的相关协议"><span class="nav-number">6.7.</span> <span class="nav-text">7、计算机网络的相关协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、http-https-http2-0"><span class="nav-number">6.8.</span> <span class="nav-text">8、http/https/http2.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、get-post区别"><span class="nav-number">6.9.</span> <span class="nav-text">9、get post区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、ajax、-axios库"><span class="nav-number">6.10.</span> <span class="nav-text">10、ajax、 axios库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、tcp三次握手，四次挥手流程"><span class="nav-number">6.11.</span> <span class="nav-text">11、tcp三次握手，四次挥手流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、跨域"><span class="nav-number">6.12.</span> <span class="nav-text">12、跨域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13、前端安全XSS、CSRF"><span class="nav-number">6.13.</span> <span class="nav-text">13、前端安全XSS、CSRF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14、websocket"><span class="nav-number">6.14.</span> <span class="nav-text">14、websocket</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15、Http请求中的keep-alive有了解吗"><span class="nav-number">6.15.</span> <span class="nav-text">15、Http请求中的keep-alive有了解吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16、网络分层"><span class="nav-number">6.16.</span> <span class="nav-text">16、网络分层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17、即时通信，除了Ajax和websocket"><span class="nav-number">6.17.</span> <span class="nav-text">17、即时通信，除了Ajax和websocket</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18、模块化，commonJS，es6，cmd，amd"><span class="nav-number">6.18.</span> <span class="nav-text">18、模块化，commonJS，es6，cmd，amd</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue"><span class="nav-number">7.</span> <span class="nav-text">Vue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、vue解决了什么问题"><span class="nav-number">7.1.</span> <span class="nav-text">1、vue解决了什么问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、MVVM的理解"><span class="nav-number">7.2.</span> <span class="nav-text">2、MVVM的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、如何实现一个自定义组件，不同组件之间如何通信的？"><span class="nav-number">7.3.</span> <span class="nav-text">3、如何实现一个自定义组件，不同组件之间如何通信的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、nextTick"><span class="nav-number">7.4.</span> <span class="nav-text">4、nextTick</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、生命周期"><span class="nav-number">7.5.</span> <span class="nav-text">5、生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、虚拟dom的原理"><span class="nav-number">7.6.</span> <span class="nav-text">6、虚拟dom的原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、双向绑定的原理？数据劫持？"><span class="nav-number">7.7.</span> <span class="nav-text">7、双向绑定的原理？数据劫持？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、组件通信"><span class="nav-number">7.8.</span> <span class="nav-text">8、组件通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、Proxy-相比于-defineProperty-的优势"><span class="nav-number">7.9.</span> <span class="nav-text">9、Proxy 相比于 defineProperty 的优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、watch-computed区别"><span class="nav-number">7.10.</span> <span class="nav-text">10、watch computed区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、virtual-dom-原理实现"><span class="nav-number">7.11.</span> <span class="nav-text">11、virtual dom 原理实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、vue-router-hash，-HTML5-新增的-pushState"><span class="nav-number">7.12.</span> <span class="nav-text">12、vue-router(hash， HTML5 新增的 pushState</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13、vuex的理解"><span class="nav-number">7.13.</span> <span class="nav-text">13、vuex的理解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前端性能优化"><span class="nav-number">8.</span> <span class="nav-text">前端性能优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-页面DOM节点太多，会出现什么问题？如何优化？"><span class="nav-number">8.1.</span> <span class="nav-text">1.页面DOM节点太多，会出现什么问题？如何优化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-如何做性能监测"><span class="nav-number">8.2.</span> <span class="nav-text">2.如何做性能监测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-SEO和语义化"><span class="nav-number">8.3.</span> <span class="nav-text">3.SEO和语义化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微信小程序"><span class="nav-number">9.</span> <span class="nav-text">微信小程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序和h5差异，如果有开发weex的经验，可能会加上weex"><span class="nav-number">9.1.</span> <span class="nav-text">微信小程序和h5差异，如果有开发weex的经验，可能会加上weex</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git"><span class="nav-number">10.</span> <span class="nav-text">git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些基本命令"><span class="nav-number">10.1.</span> <span class="nav-text">一些基本命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack"><span class="nav-number">11.</span> <span class="nav-text">webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、打包原理"><span class="nav-number">11.1.</span> <span class="nav-text">1、打包原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、打包插件"><span class="nav-number">11.2.</span> <span class="nav-text">2、打包插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、webpack热更新原理"><span class="nav-number">11.3.</span> <span class="nav-text">3、webpack热更新原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、优化构建速度"><span class="nav-number">11.4.</span> <span class="nav-text">4、优化构建速度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法"><span class="nav-number">12.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、排序算法"><span class="nav-number">12.1.</span> <span class="nav-text">1、排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、动态规划，参见背包问题"><span class="nav-number">12.2.</span> <span class="nav-text">2、动态规划，参见背包问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、二叉树"><span class="nav-number">12.3.</span> <span class="nav-text">3、二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、加油站问题-贪心算法"><span class="nav-number">12.4.</span> <span class="nav-text">4、加油站问题(贪心算法)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、二分法"><span class="nav-number">12.5.</span> <span class="nav-text">5、二分法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、二叉树遍历"><span class="nav-number">12.6.</span> <span class="nav-text">6、二叉树遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、单链表反转"><span class="nav-number">12.7.</span> <span class="nav-text">7、单链表反转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、取1000个数字里面的质数"><span class="nav-number">12.8.</span> <span class="nav-text">8、取1000个数字里面的质数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、找出数组中和为给定值的两个元素，如：-1-2-3-4-5-中找出和为6的两个元素。"><span class="nav-number">12.9.</span> <span class="nav-text">9、找出数组中和为给定值的两个元素，如：[1, 2, 3, 4, 5]中找出和为6的两个元素。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点"><span class="nav-number">12.10.</span> <span class="nav-text">10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#移动端"><span class="nav-number">13.</span> <span class="nav-text">移动端</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、自适应"><span class="nav-number">13.1.</span> <span class="nav-text">1、自适应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、pwa"><span class="nav-number">13.2.</span> <span class="nav-text">2、pwa</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、移动端手势"><span class="nav-number">13.3.</span> <span class="nav-text">3、移动端手势</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附加题"><span class="nav-number">14.</span> <span class="nav-text">附加题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、无限滚动方案"><span class="nav-number">14.1.</span> <span class="nav-text">1、无限滚动方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、如何处理兼容性问题"><span class="nav-number">14.2.</span> <span class="nav-text">2、如何处理兼容性问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、你遇到过最难的问题是什么"><span class="nav-number">14.3.</span> <span class="nav-text">3、你遇到过最难的问题是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、ES6-class与ES5-function区别及联系"><span class="nav-number">14.4.</span> <span class="nav-text">4、ES6 class与ES5 function区别及联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、vue怎么监听数组"><span class="nav-number">14.5.</span> <span class="nav-text">5、vue怎么监听数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、写过webpack-loader吗"><span class="nav-number">14.6.</span> <span class="nav-text">6、写过webpack loader吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、微信网页版登录机制思考"><span class="nav-number">14.7.</span> <span class="nav-text">7、微信网页版登录机制思考</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">任振飞</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">5k</span>
+  
+</div>
+
+<div class="powered-by">
+  <i class="fa fa-user-md"></i>
+  <span id="busuanzi_container_site_uv">
+    本站访客数:<span id="busuanzi_value_site_uv"></span>
+  </span>
+</div>
+
+  <div class="powered-by">人生如逆旅，我亦是行人</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">stay hungry stay foolish.</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+        <script src="https://billts.site/js/gitment.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitment({
+            id: '1566445766203', 
+            owner: 'renzhenfei666',
+            repo: 'renzhenfei666.github.io',
+            
+            oauth: {
+            
+            
+                client_secret: 'c3ae813406cdb797d351511e5dc973bbb927b198',
+            
+                client_id: 'a3cfa80fa2006490d7ac'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
